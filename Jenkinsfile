@@ -4,8 +4,8 @@ pipeline {
                     stage('Test') {
                                         steps
                                             {      sh '''  sudo yum install pip
-                                                            pip install flask
-                                                            python3 my-app.py
+                                                           sudo pip install flask
+                                                            sudo python3 my-app.py
                                                            ''' }
                                                             }
                                                             }
