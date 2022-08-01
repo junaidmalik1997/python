@@ -3,8 +3,9 @@ pipeline {
             stages {
                     stage('Test') {
                                         steps
-                                            {      sh '''  sudo yum install python3 -y
-                                                            python3 --version
+                                            {      sh '''  sudo yum install pip
+                                                            pip install flask
+                                                            python3 my-app.py
                                                            ''' }
                                                             }
                                                             }
