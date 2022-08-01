@@ -3,7 +3,7 @@ pipeline {
             stages {
                     stage('Test') {
                                         steps
-                                            {      sh '''  yum install python3 -y
+                                            {      sh '''  sudo yum install python3 -y
                                                             python3 --version
                                                            ''' }
                                                             }
