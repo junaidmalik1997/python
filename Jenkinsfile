@@ -5,7 +5,7 @@ pipeline {
                                         steps
                                             {      sh ''' sudo yum install python3 -y
                                                             python3 --version
-                                                            }
+                                                           ''' }
                                                             }
                                                             }
                                                             }
