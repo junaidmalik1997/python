@@ -4,7 +4,7 @@ pipeline {
                     stage('Test') {
                                         steps
                                             {      sh '''  python3 -m ensurepip --upgrade
-                                                           pip3 install jq
+                                                           pip3 install flask
                                                            python3 my-app.py
                                                            ''' }
                                                             }
