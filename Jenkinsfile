@@ -6,7 +6,7 @@ pipeline {
                                             {      sh ''' pwd 
                                             whoami
                                             python3 -m ensurepip --upgrade
-                                            pip3 install flask
+                                            pip install flask
                                             python my-app.py
                                                            ''' }
                                                             }
