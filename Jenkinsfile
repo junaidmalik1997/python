@@ -6,9 +6,8 @@ pipeline {
                                             {      sh ''' pwd 
                                             whoami
                                             python3 -m ensurepip --upgrade
-                                                           pip3 install flask
-                                                            chmod 777 my-app.py
-                                                           python3 my-app.py
+                                            pip3 install flask
+                                            sudo python3 my-app.py
                                                            ''' }
                                                             }
                                                             }
