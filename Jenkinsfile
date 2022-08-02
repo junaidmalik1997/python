@@ -5,7 +5,7 @@ pipeline {
                                         steps
                                             {      sh ''' pwd 
                                             whoami
-                                            sudo su
+                                            sudo su -
                                             aws --version
                                             python3 --version
                                             echo "1"
