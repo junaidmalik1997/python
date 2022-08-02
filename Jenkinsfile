@@ -12,7 +12,7 @@ pipeline {
                                             echo "2"
                                             pip3 install flask --user
                                             echo "3"
-                                            python3 my-app.py
+                                            sudo python3 my-app.py
                                                            ''' 
                                                   }
                                                             }
