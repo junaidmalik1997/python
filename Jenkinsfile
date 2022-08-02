@@ -8,7 +8,7 @@ pipeline {
                                             aws --version
                                             python --version
                                             python -m ensurepip --upgrade
-                                            pip install flask
+                                            pip install flask --user
                                             python my-app.py
                                                            ''' }
                                                             }
