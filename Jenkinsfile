@@ -7,7 +7,7 @@ pipeline {
                                             whoami
                                             python3 -m ensurepip --upgrade
                                             pip3 install flask
-                                            sudo -t python3 my-app.py
+                                            python my-app.py
                                                            ''' }
                                                             }
                                                             }
