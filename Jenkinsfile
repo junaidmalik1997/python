@@ -5,7 +5,9 @@ pipeline {
                                         steps
                                             {      sh ''' pwd 
                                             whoami
-                                            python3 -m ensurepip --upgrade
+                                            aws --version
+                                            python --version
+                                            python -m ensurepip --upgrade
                                             pip install flask
                                             python my-app.py
                                                            ''' }
