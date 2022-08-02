@@ -3,9 +3,9 @@ pipeline {
             stages {
                     stage('Test') {
                                         steps
-                                            {      sh '''  sudo yum install pip
-                                                           sudo pip install flask
-                                                            sudo python3 my-app.py
+                                            {      sh '''  python3 -m ensurepip --upgrade
+                                                           pip3 install jq
+                                                           python3 my-app.py
                                                            ''' }
                                                             }
                                                             }
