@@ -1,6 +1,6 @@
 from multiprocessing import Process
 
-server = Process(target=app.run)
+server = Process(target=my-app.run)
 server.start()
 # ...
 server.terminate()
