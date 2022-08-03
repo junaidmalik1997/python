@@ -1,3 +1,12 @@
+from multiprocessing import Process
+
+server = Process(target=app.run)
+server.start()
+# ...
+server.terminate()
+server.join()
+
+
 from flask import Flask
 
 app = Flask(__name__)
