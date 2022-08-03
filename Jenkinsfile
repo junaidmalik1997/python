@@ -5,7 +5,7 @@ pipeline {
                                         steps
                                             {    
                                                       catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') { 
-                                                            sh "exit 1"
+                                                            sh "exit 0"
                                                       }          
                                                       sshPublisher(publishers: [sshPublisherDesc(configName: 'junaid-targetinstance', 
                                                   transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand:
