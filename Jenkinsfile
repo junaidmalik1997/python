@@ -10,7 +10,7 @@ pipeline {
                                                      sudo python3 -m ensurepip --upgrade
                                                      sudo pip3 install flask --user
                                                      sudo python3 my-app.py 
-                                                     exit''',
+                                                     exit''',execTimeout: 130000,
                                                      patternSeparator: '[, ]+', sourceFiles: 'my-app.py')], verbose: true)])
                                                 
                                                            
