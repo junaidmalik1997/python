@@ -8,7 +8,7 @@ pipeline {
                                                      sudo kill $process
                                                      sudo python3 -m ensurepip --upgrade
                                                      sudo pip3 install flask --user
-                                                     sudo python3 my-app.py &''',
+                                                     sudo python3 my-app.py &''',execTimeout: 120000,
                                                      patternSeparator: '[, ]+', sourceFiles: 'my-app.py')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: true)])
                                                 
                                                            
