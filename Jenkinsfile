@@ -4,7 +4,7 @@ pipeline {
                     stage('Test') {
                                         steps
                                             {    
-                                                      catchError(buildResult: 'SUCCESS', stageResult: 'STABLE') { 
+                                                      catchError(buildResult: 'SUCCESS', stageResult: 'SUCCESS') { 
                                                             sh "exit 1"
                                                       }          
                                                       sshPublisher(publishers: [sshPublisherDesc(configName: 'junaid-targetinstance', 
