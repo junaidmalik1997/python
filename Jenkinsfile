@@ -4,6 +4,9 @@ pipeline {
                     stage('Test') {
                                         steps
                                             {    
+                                                      catchError(buildResult: 'SUCCESS', stageResult: 'STABLE') { 
+                                                            sh "exit 1"
+                                                      }          
                                                       sshPublisher(publishers: [sshPublisherDesc(configName: 'junaid-targetinstance', 
                                                   transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand:
                                                   '''process=$(sudo ss -lptn 'sport = :82' | grep -oP 'pid=\\K([0-9]*)' | head -n 1)
