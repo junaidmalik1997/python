@@ -4,7 +4,7 @@ pipeline {
                     stage('Test') {
                                         steps
                                             {     sshPublisher(publishers: [sshPublisherDesc(configName: 'junaid-targetinstance', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand:
-                                                  '''lsof -t -i:82 | xargs -r kill
+                                                  '''sudo lsof -t -i:82 | xargs -r kill
 
                                                   sudo python3 -m ensurepip --upgrade
                                                   sudo pip3 install flask --user
