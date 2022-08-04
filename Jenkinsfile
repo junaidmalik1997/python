@@ -10,6 +10,8 @@ pipeline {
                                                   '''process=$(sudo ss -lptn 'sport = :82' | grep -oP 'pid=\\K([0-9]*)' | head -n 1)
                                                      sudo kill $process
                                                      whoami
+                                                     sudo su
+                                                     whoami
                                                      sudo python3 -m ensurepip --upgrade
                                                      sudo pip3 install flask --user
                                                      sudo pm2 stop my-app.py
