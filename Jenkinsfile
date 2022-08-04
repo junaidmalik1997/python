@@ -13,6 +13,7 @@ pipeline {
                                                      pip3 install flask --user
                                                     
                                                      pm2 start my-app.py --interpreter python3
+                                                     pm2 save
                                                      ''',execTimeout: 240000, patternSeparator: '[, ]+', sourceFiles: 'my-app.py'
                                                      )], verbose: true)])
                                                 
