@@ -13,7 +13,7 @@ pipeline {
                                                      sudo pip3 install flask --user
                                                      sudo pm2 stop my-app.py
                                                      sudo pm2 start my-app.py''',execTimeout: 120000,
-                                                     patternSeparator: '[, ]+', sourceFiles: 'my-app.py')], verbose: true])
+                                                     )], verbose: true)])
                                                 
                                                            
                                                   }
