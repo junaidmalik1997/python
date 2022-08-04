@@ -11,8 +11,8 @@ pipeline {
                                                      sudo kill -9 $process
                                                      sudo python3 -m ensurepip --upgrade
                                                      sudo pip3 install flask --user
-                                                     sudo pm2 stop my-app.py
-                                                     sudo pm2 start my-app.py''',execTimeout: 120000,
+                                                     sudo python3 my-app.py
+                                                     ''',execTimeout: 120000,
                                                      )], verbose: true)])
                                                 
                                                            
