@@ -6,7 +6,7 @@ pipeline {
                                         steps
                                             {    
 
-                                                 sh '''process=$(sudo ss -lptn 'sport = :82' | grep -oP 'pid=\\K([0-9]*)' | head -n 1)
+                                                 sh '''process=$(ss -lptn 'sport = :82' | grep -oP 'pid=\\K([0-9]*)' | head -n 1)
                                                      kill $process
                                                      python3 -m ensurepip --upgrade
                                                      pip3 install flask 
