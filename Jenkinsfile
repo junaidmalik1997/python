@@ -6,7 +6,7 @@ pipeline {
                                         steps
                                             {    
 
-                                                 sh '''process=$(ss -lptn 'sport = :82' | grep -oP 'pid=\\K([0-9]*)' | head -n 1)
+                                                 sh '''
                                                      pwd
                                                      whoami
                                                      python3 -m ensurepip --upgrade
